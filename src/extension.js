@@ -13,5 +13,5 @@ exports.activate = function(context) {
  * 插件被释放时触发
  */
 exports.deactivate = function() {
-    console.log('您的扩展“vscode-plugin-demo”已被释放！')
+    console.log('vscode-plugin-demo closed')
 };

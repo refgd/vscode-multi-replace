@@ -112,8 +112,8 @@ const util = {
         const positions = this.findStr(rules);
         let content = editor.document.getText();
         for (let index = 0; index < rules.length; index++) {
-            let rule = new RegExp(rules[index].find, 'g'); // 正则匹配
-            content = content.replace(rule, rules[index].to);
+            let rule = new RegExp(rules[index].find, 'gm'); // 正则匹配
+            content = content.replace(rule, rules[index].to.replace(/\\n/g, '\n').replace(/\\t/g, '\t'));
         }
 
         let invalidRange = new vscode.Range(0, 0, editor.document.lineCount /*intentionally missing the '-1' */, 0);

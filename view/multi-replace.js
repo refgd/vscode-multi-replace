@@ -65,10 +65,11 @@ new Vue({
             }, null);
         },
         reset() {
-            this.replaceRule.forEach(item => {
-                item.find = '';
-                item.to = '';
-            })
+            this.replaceRule = [{
+                find: '',
+                to: '',
+                showDel: false
+            }];
         },
         validate() {
             let emptyNum = 0;
@@ -107,7 +108,6 @@ new Vue({
                 rules: this.replaceRule
             }, (data) => {
                 this.alert(`${data.length}个匹配项已替换`);
-                this.reset();
             });
         },
         add() {

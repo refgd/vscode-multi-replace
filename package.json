@@ -19,7 +19,7 @@
     "activationEvents": [
         "onCommand:extension.multiReplace"
     ],
-    "main": "./src/extension",
+    "main": "./out/main",
     "contributes": {
         "configuration": {},
         "commands": [

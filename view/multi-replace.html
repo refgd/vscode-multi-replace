@@ -28,9 +28,10 @@
             <div v-if="replaceRule.length > 0">
                 <el-button @click="match" :size="size">Search</el-button>
                 <el-button @click="replace" type="primary" :size="size">Replace All</el-button>
+                <el-button @click="reset" type="danger" :size="size">Reset</el-button>
             </div>
             <div v-else class="empty">
-                点击右上角 "+" 添加匹配规则
+                Click "+" To Add Rule
             </div>
             <!-- <div>{{replaceRule}}</div> -->
         </div>
